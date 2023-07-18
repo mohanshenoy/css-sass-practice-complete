@@ -1,4 +1,4 @@
-## Reference links on BEM
+# Reference links on BEM
 
 https://css-tricks.com/bem-101/
 
