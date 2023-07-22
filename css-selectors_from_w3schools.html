@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- https://www.w3schools.com/css/css_selectors.asp -->
+<html>
+  <head>
+    <style>
+      p::first-letter {
+        color: #ff0000;
+        font-size: 200%;
+      }
+      h1::before {
+        content: 'mohan ';
+      }
+      h1::after {
+        content: url(smily.png);
+      }
+
+      ::marker {
+        color: green;
+        font-size: 23px;
+      }
+
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+    <p>
+      In this example, :lang defines the quotation marks for q elements with
+      lang="no":
+    </p>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ol>
+  </body>
+</html>
