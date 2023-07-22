@@ -1,0 +1,90 @@
+border color
+background-color
+color
+font-size
+font-family
+line-height
+font-weight
+font-style
+padding
+margin
+border
+border-radius
+opacity
+text-decoration
+display
+text-transform
+
+Identify all basic html elements ( which can be treated as common html elements) add thier styles into a central style sheet file ( ex. buttons , checkbox , menu etc)
+
+Identify all composed elements ( which can be treated as common html elements & consists of more than one basic html element ) and add thier styles into a central style sheet file( ex. listing elements , cards , dialog box etc ) 
+
+All remaining styles are kept indivual angular component .scss files
+
+BEM:  In this CSS methodology a block is a top-level abstraction of a new component, for example a button: .btn { }. 
+This block should be thought of as a parent. 
+Child items, or elements, can be placed inside and these are denoted by two underscores following the name of the block like .btn__price { }. 
+Finally, modifiers can manipulate the block so that we can theme or style that particular component without inflicting changes on a completely unrelated module. 
+This is done by appending two hyphens to the name of the block just like btn--orange.
+
+Individual ELEMENTS to have its own classes. 
+You can split them into multiple classes describing MODIFIER , as you feel necessary for ex. btn , btn--big btn--blue , btn--red ) and maintain its own attributes.
+You'll find that there are certain styles that you're applying over and over. Instead of adding that particular style to each ID, you can create generic classes and add them to the IDs or other CSS classes
+For example, I find myself using float:right and float:left over and over in my designs. So I simply add the classes .left and .right to my stylesheet, and reference it in the elements. Check this basic CSS code for an example:
+	.left {float:left}
+	.right {float:right}
+	<div id="coolbox" class="left">...</div>
+If components are part of bigger BLOCK ( element/component) you can mention parent__child ( btn__price , btn__text )  
+<a href="https://css-tricks.com" class="btn btn--green btn--big">
+  <span class="btn__price">$9</span>
+  <span class="btn__text">Big button</span>
+</a>
+
+Common attributes ( across site/app ) to be maintained at global level
+body {
+  font-family: 'fira-sans-2', sans-serif;
+  background-color: #ccc;
+}
+
+https://css-tricks.com/specifics-on-css-specificity/
+
+Strategies for Keeping CSS Specificity Low
+https://css-tricks.com/strategies-keeping-css-specificity-low/
+Keep CSS specificity very flat and low. It means you won’t end up fighting with yourself over specificity.
+It’s generally a sign that things are in relative harmony. You aren’t fighting against yourself and you have plenty of room to override styles when you need to.
+Specificity on selectors tends to creep up over time, and there is a hard ceiling to that.
+
+Avoid !important
+Points we follow while using !important:
+1. We always try to use specificity first before using  !important.
+2. We always use !important only in page specific if needed which should not effect other external css.
+3. We avoid to use !important while writing common and public code.
+
+https://blogs.halodoc.io/best-practices-that-we-follow-to-avoid-specificity-issues/
+What is CSS specificity?
+In web development it is common to write many CSS rules for one element, but sometimes a few of them may not get applied because the browser decides which rule will be applied to the element, which is called specificity.
+What rule will take precedence over the others, and why? The one with the most specificity will win. If two or more rules have the same specificity, the one that appears last will prevail.
+
+https://csswizardry.com/2012/05/keep-your-css-selectors-short/
+Keeping CSS selectors short helps with a lot of things:
+Increases selector efficiency
+Reduces location dependency
+Increases portability
+Reduces chances of selector breakage
+Decreases specificity
+Can make code more forgiving
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

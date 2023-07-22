@@ -23,6 +23,28 @@
         color: red;
         background: yellow;
       }
+
+      a[target] {
+        background-color: yellow;
+      }
+      a[target='_blank'] {
+        background-color: green;
+      }
+      [title~='flower'] {
+        border: 5px solid yellow;
+      }
+      [class|='top'] {
+        background: yellow;
+      }
+      [class^='top'] {
+        background: yellow;
+      }
+      [class$='test'] {
+        background: yellow;
+      }
+      [class*='te'] {
+        background: yellow;
+      }
     </style>
   </head>
   <body>
@@ -44,5 +66,10 @@
       <li>Second</li>
       <li>Third</li>
     </ol>
+    <a href="https://www.w3schools.com">w3schools.com</a>
+    <br />
+    <a href="http://www.disney.com" target="_blank">disney.com</a>
+    <br />
+    <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
   </body>
 </html>
